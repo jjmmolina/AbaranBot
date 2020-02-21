@@ -1,10 +1,12 @@
 import logging
+import emoji
+import datetime
+
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Updater, CommandHandler, CallbackQueryHandler
-import emoji
 from weather import weather
 from forecast import forecast
-import datetime
+
 from Util import getWarnings, get_report_list
 from urllib.request import urlopen
 
