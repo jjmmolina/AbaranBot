@@ -1,10 +1,10 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+Hello all. This is my first bot
 
 ### What is this repository for? ###
 
-This is the first Telegram Answare's Chat Bot
+This is the first Telegram Jesus's Chat Bot
 Version 0
 
 ### How do I get set up? ###
