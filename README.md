@@ -17,6 +17,6 @@ To run you should write in a console "python bot.py"
 * Other guidelines
 
 ### Who do I talk to? ###
-This tool is developer by Answare Team, and is a branch of book "Automate it, recipies to upskill your business" https://www.packtpub.com/application-development/automate-it
+This tool is developer by Jesus Martinez, and is a branch of book "Automate it, recipies to upskill your business" https://www.packtpub.com/application-development/automate-it
 * Repo owner or admin
 * Other community or team contact
