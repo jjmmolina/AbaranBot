@@ -21,15 +21,14 @@ class weather:
         self.cloud = info['clouds']['all']
 
 
-def get_info(city_name):
-    query = 'http://api.openweathermap.org/data/2.5/weather?q=%s&units=metric&&APPID=7eaa0cd93aca93f3ff4c382a5c17d61c' % city_name
-    r = requests.get(query)
-    result = json.loads(r.text)
-    if result['cod'] == '404':
-        print
-        'Error:city not found,please check name of city', sys.exit()
-    else:
-        return result
+    def get_info(city_name):
+        query = 'http://api.openweathermap.org/data/2.5/weather?q=%s&units=metric&&APPID=7eaa0cd93aca93f3ff4c382a5c17d61c' % city_name
+        r = requests.get(query)
+        result = json.loads(r.text)
+        if result['cod'] == '404':
+            print('Error:city not found,please check name of city', sys.exit())
+        else:
+            return result
 
 class forecast:
     def __init__(self, city_name):
@@ -50,14 +49,14 @@ class forecast:
         self.cloud = info['clouds']['all']
 
 
-def get_info(city_name):
-    query = 'http://api.openweathermap.org/data/2.5/forecast?q=%s&units=metric&&APPID=7eaa0cd93aca93f3ff4c382a5c17d61c' % city_name
-    r = requests.get(query)
-    result = json.loads(r.text)
-    elemento = result['list']
-    print(elemento[1])
-    if result['cod'] == '404':
-        print
-        'Error:city not found,please check name of city', sys.exit()
-    else:
-        return elemento[1]
+    def get_info(city_name):
+        query = 'http://api.openweathermap.org/data/2.5/forecast?q=%s&units=metric&&APPID=7eaa0cd93aca93f3ff4c382a5c17d61c' % city_name
+        r = requests.get(query)
+        result = json.loads(r.text)
+        elemento = result['list']
+        print(elemento[1])
+        if result['cod'] == '404':
+            print
+            'Error:city not found,please check name of city', sys.exit()
+        else:
+            return elemento[1]
