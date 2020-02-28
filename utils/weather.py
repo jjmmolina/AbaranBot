@@ -4,7 +4,8 @@ import json
 import sys
 
 
-class weather:
+class Weather:
+
     def __init__(self, city_name):
         info = self.get_info(city_name)
         self.name = info['name']
@@ -21,7 +22,7 @@ class weather:
         self.cloud = info['clouds']['all']
 
 
-    def get_info(city_name):
+    def get_info(self, city_name):
         query = 'http://api.openweathermap.org/data/2.5/weather?q=%s&units=metric&&APPID=7eaa0cd93aca93f3ff4c382a5c17d61c' % city_name
         r = requests.get(query)
         result = json.loads(r.text)
@@ -30,7 +31,7 @@ class weather:
         else:
             return result
 
-class forecast:
+class Forecast:
     def __init__(self, city_name):
         info = self.get_info(city_name)
         self.name = city_name
@@ -49,7 +50,7 @@ class forecast:
         self.cloud = info['clouds']['all']
 
 
-    def get_info(city_name):
+    def get_info(self, city_name):
         query = 'http://api.openweathermap.org/data/2.5/forecast?q=%s&units=metric&&APPID=7eaa0cd93aca93f3ff4c382a5c17d61c' % city_name
         r = requests.get(query)
         result = json.loads(r.text)
