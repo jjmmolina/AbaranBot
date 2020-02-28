@@ -6,7 +6,7 @@ import sys
 
 class weather:
     def __init__(self, city_name):
-        info = get_info(city_name)
+        info = self.get_info(city_name)
         self.name = info['name']
         self.country = info['sys']['country']
         self.dt = info['dt']
@@ -32,7 +32,7 @@ class weather:
 
 class forecast:
     def __init__(self, city_name):
-        info = get_info(city_name)
+        info = self.get_info(city_name)
         self.name = city_name
         #self.country = info['sys']['country']
         self.dt = info['dt_txt']
