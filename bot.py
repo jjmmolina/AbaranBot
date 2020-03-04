@@ -6,7 +6,8 @@ from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
 from telegram.ext import Updater, CommandHandler, CallbackQueryHandler, CallbackContext
 from telegram.utils.promise import logger
 
-from config.authentication import API_TOKEN
+# from config.authentication import API_TOKEN
+from instance.config import API_TOKEN
 from utils.weather import Weather, Forecast
 from urllib.request import urlopen
 
